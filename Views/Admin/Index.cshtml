@@ -1,0 +1,34 @@
+﻿@using Skill_Profile.Models.Siniflar
+@model List<Skills>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>YETENEK</th>
+            <th>DEGER</th>
+            <th>SİL</th>
+            <th>GÜNCELLE</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Aciklama</td>
+                <td>@item.Deger</td>
+                <td><a href="/Admin/YetenekSil/@item.Id/" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Admin/YetenekGoruntule/@item.Id/" class="btn btn-primary">Güncelle</a></td>
+
+            </tr>
+        }
+
+    </table>
+
+
+
+</div>
+

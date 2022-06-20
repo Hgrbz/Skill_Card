@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        .navbar-ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .navbar-li {
+            float: left;
+        }
+
+
+        .navbar-lia {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="navbar-ul">
+        <li class="navbar-li"><a class="navbar-lia" href="/Admin/Index/">Yetenek Listesi</a></li>
+        <li class="navbar-li"><a class="navbar-lia" href="/Admin/YeniYetenek">Yeni Yetenek</a></li>
+        <li class="navbar-li"><a class="navbar-lia" href="/Default/Index">Siteye Git</a></li>
+    </ul>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+</body>
+
+</html>

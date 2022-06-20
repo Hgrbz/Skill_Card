@@ -1,0 +1,24 @@
+﻿@using Skill_Profile.Models.Siniflar
+@model Skill_Profile.Models.Siniflar.Skills
+@{
+    ViewBag.Title = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+<h2>Yetenek Guncelle</h2>
+
+<form class="form-group" method="post">
+
+    <div>
+        <label>Yetenek Girin</label>
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Yüzde Girin</label>
+        @Html.TextBoxFor(x => x.Deger, new { @class = "form-control" })
+    </div>
+
+
+    <button class="btn btn-primary">Yetenek Güncelle</button>
+
+</form>
